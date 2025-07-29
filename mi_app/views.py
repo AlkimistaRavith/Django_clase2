@@ -11,4 +11,8 @@ def listar_productos(request):
 
     return render(request, "lista_de_productos.html", {"productos":productos})
 
- 
+def layout(request):
+    return render(request, "mi_app/layout.html", {})
+
+def herencia(request):
+    return render(request, "mi_app/herencia.html", {})
