@@ -74,3 +74,11 @@ urlpatterns = [
 "DIRS": [BASE_DIR / "templates"],
 
 ## Modificar html
+
+
+## Para guardar imagenes en carpeta aparte: agregar en setting.py
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+## Luego en urls del proyecto agregar:
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

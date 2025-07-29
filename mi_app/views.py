@@ -10,3 +10,5 @@ def listar_productos(request):
     productos = Producto.objects.all()
 
     return render(request, "lista_de_productos.html", {"productos":productos})
+
+ 
